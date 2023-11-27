@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PointBuyService } from './services/point-buy.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dnd-stat-calculator';
+
 }
