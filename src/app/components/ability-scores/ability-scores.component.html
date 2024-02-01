@@ -1,32 +1,38 @@
 
 <div class="grid-item">
-  <div class="score-val">{{abilityScores.strength}}</div>
+  <div class="score-attr">(STR)</div>
   <input type="range" value="8" id="as-strength" [(ngModel)]="abilityScores.strength" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.strength}}</div>
 </div>
 
 <div class="grid-item">
-  <div class="score-val">{{abilityScores.dexterity}}</div>
+  <div class="score-attr">(DEX)</div>
   <input type="range" value="8" id="as-dexterity" [(ngModel)]="abilityScores.dexterity" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.dexterity}}</div>
  
 </div>
 
 <div class="grid-item">
-  <div class="score-val">{{abilityScores.constitution}}</div>
+  <div class="score-attr">(CON)</div>
   <input type="range" value="8" id="as-constitution" [(ngModel)]="abilityScores.constitution" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.constitution}}</div>
 </div>
 
 <div class="grid-item">
-  <div class="score-val">{{abilityScores.intelligence}}</div>
+  <div class="score-attr">(INT)</div>
   <input type="range"  value="8" id="as-intelligence" [(ngModel)]="abilityScores.intelligence" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.intelligence}}</div>
 </div>
 
 <div class="grid-item">
-  <div class="score-val">{{abilityScores.wisdom}}</div>
+  <div class="score-attr">(WIS)</div>
   <input type="range" value="8" id="as-wisdom" [(ngModel)]="abilityScores.wisdom" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.wisdom}}</div>
 </div>
 
 <div class="grid-item">
-  <div class="score-val">{{abilityScores.charisma}}</div>
+  <div class="score-attr">(CHA)</div>
   <input type="range" value="8" id="as-charisma" [(ngModel)]="abilityScores.charisma" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.charisma}}</div>
 
 </div>

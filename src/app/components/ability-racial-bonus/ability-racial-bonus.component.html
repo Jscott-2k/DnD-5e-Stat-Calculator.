@@ -1,23 +1,42 @@
 <div class="grid-item">
-    <input type="number" id="as-racial-strength" [(ngModel)]="racialBonuses.strength" (input)="updateRacialBonus()" max="4" min="0">
-  </div>
-  
-  <div class="grid-item">
-    <input type="number" id="as-racial-dexterity" [(ngModel)]="racialBonuses.dexterity" (input)="updateRacialBonus()" max="4" min="0">
-  </div>
-  
-  <div class="grid-item">
-    <input type="number" id="as-racial-constitution" [(ngModel)]="racialBonuses.constitution" (input)="updateRacialBonus()" max="4" min="0">
-  </div>
-  
-  <div class="grid-item">
-    <input type="number" id="as-racial-intelligence" [(ngModel)]="racialBonuses.intelligence" (input)="updateRacialBonus()" max="4" min="0">
-  </div>
-  
-  <div class="grid-item">
-    <input type="number" id="as-racial-wisdom" [(ngModel)]="racialBonuses.wisdom" (input)="updateRacialBonus()" max="4" min="0">
-  </div>
-  
-  <div class="grid-item">
-    <input type="number" id="as-racial-charisma" [(ngModel)]="racialBonuses.charisma" (input)="updateRacialBonus()" max="4" min="0">
-  </div>
+  <div class="score-attr">(STR)</div>
+  <input type="range" value="0" id="as-racial-strength" [(ngModel)]="racialBonuses.strength"
+    (input)="updateRacialBonus()" max="4" min="0">
+
+  <div class="score-val">+{{racialBonuses.strength}}</div>
+</div>
+
+<div class="grid-item">
+  <div class="score-attr">(DEX)</div>
+  <input type="range" value="0" id="as-racial-dexterity" [(ngModel)]="racialBonuses.dexterity"
+    (input)="updateRacialBonus()" max="4" min="0">
+  <div class="score-val">+{{racialBonuses.dexterity}}</div>
+</div>
+
+<div class="grid-item">
+  <div class="score-attr">(CON)</div>
+  <input type="range" value="0" id="as-racial-constitution" [(ngModel)]="racialBonuses.constitution"
+    (input)="updateRacialBonus()" max="4" min="0">
+  <div class="score-val">+{{racialBonuses.constitution}}</div>
+</div>
+
+<div class="grid-item">
+  <div class="score-attr">(INT) </div>
+  <input type="range" value="0" id="as-racial-intelligence" [(ngModel)]="racialBonuses.intelligence"
+    (input)="updateRacialBonus()" max="4" min="0">
+  <div class="score-val">+{{racialBonuses.intelligence}}</div>
+</div>
+
+<div class="grid-item">
+  <div class="score-attr">(WIS)</div>
+  <input type="range" value="0" id="as-racial-wisdom" [(ngModel)]="racialBonuses.wisdom" (input)="updateRacialBonus()"
+    max="4" min="0">
+  <div class="score-val">+{{racialBonuses.wisdom}}</div>
+</div>
+
+<div class="grid-item">
+  <div class="score-attr">(CHA)</div>
+  <input type="range" value="0" id="as-racial-charisma" [(ngModel)]="racialBonuses.charisma"
+    (input)="updateRacialBonus()" max="4" min="0">
+  <div class="score-val">+{{racialBonuses.charisma}}</div>
+</div>

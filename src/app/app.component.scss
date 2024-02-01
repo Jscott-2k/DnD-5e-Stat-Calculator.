@@ -1,7 +1,7 @@
 main {
     display: grid;
     grid-gap:20px;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows:  1fr;
 
     grid-template-columns: repeat(6, auto);
     background-color: rgb(132, 181, 224);
@@ -10,9 +10,47 @@ main {
 app-ability-total-cost {
     grid-column: 5 / -1;
 }
+
 .grid-header{
-    background-color: rgba(255,255,255,.8);
+    background-color: rgb(205, 240, 238);
     padding: 10px;
-    font-size: 30px;
+    font-size: 22px;
     text-align: center;
+    font-weight: bold;
+}
+
+.sub-grid{
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: 2;
+    row-gap: 5px;
+    background-color: rgb(79, 123, 219);
+
+}
+@media (max-width: 1200px) {
+    main {
+        display: grid;
+        grid-gap:10px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, auto);
+        background-color: rgb(132, 181, 224);
+    }
+
+    app-ability-total-cost {
+        grid-column: 3 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        display: grid;
+        grid-gap:10px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, auto);
+        background-color: rgb(132, 181, 224);
+    }
+
+    app-ability-total-cost {
+        grid-column: 2 / -1;
+    }
 }
