@@ -22,11 +22,12 @@ app-ability-total-cost {
 .sub-grid{
     display: grid;
     grid-template-columns: subgrid;
-    grid-template-rows: 2;
+    grid-template-rows: 1fr 6fr;
     row-gap: 5px;
     background-color: rgb(79, 123, 219);
 
 }
+
 @media (max-width: 1200px) {
     main {
         display: grid;
@@ -52,5 +53,20 @@ app-ability-total-cost {
 
     app-ability-total-cost {
         grid-column: 2 / -1;
+    }
+}
+
+
+@media (max-width: 480px) {
+    main {
+        display: grid;
+        grid-gap:10px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        background-color: rgb(132, 181, 224);
+    }
+
+    app-ability-total-cost {
+        grid-column: 1 / -1;
     }
 }
