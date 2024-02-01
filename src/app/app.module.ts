@@ -10,6 +10,7 @@ import { AbilityRacialBonusComponent } from './components/ability-racial-bonus/a
 import { AbilityModifierComponent } from './components/ability-modifier/ability-modifier.component';
 import { AbilityTotalScoreComponent } from './components/ability-total-score/ability-total-score.component';
 import { AbilityTotalCostComponent } from './components/ability-total-cost/ability-total-cost.component';
+import { FormatModifierPipe } from './pipes/format-modifier.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AbilityTotalCostComponent } from './components/ability-total-cost/abili
     AbilityRacialBonusComponent,
     AbilityModifierComponent,
     AbilityTotalScoreComponent,
-    AbilityTotalCostComponent
+    AbilityTotalCostComponent,
+    FormatModifierPipe
   ],
   imports: [
     BrowserModule,

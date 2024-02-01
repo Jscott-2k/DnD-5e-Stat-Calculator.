@@ -17,7 +17,7 @@ export class PointBuyService {
   }
   calculatePointCost(abilityScore: number): number {
     if (abilityScore <= 13) {
-      return Math.floor((abilityScore - 8) / 2);
+      return (abilityScore - 8);
     } else if (abilityScore === 14) {
       return 7;
     } else if (abilityScore === 15) {

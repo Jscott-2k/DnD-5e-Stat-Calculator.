@@ -1,6 +1,18 @@
-<div class="grid-item">{{ modifiers.strength }}</div>
-<div class="grid-item">{{ modifiers.dexterity }}</div>
-<div class="grid-item">{{ modifiers.constitution}}</div>
-<div class="grid-item">{{ modifiers.intelligence }}</div>
-<div class="grid-item">{{ modifiers.wisdom }}</div>
-<div class="grid-item"> {{ modifiers.charisma }}</div>
+<div class="grid-item">
+    <div class="modifier"> {{ modifiers.strength | formatModifier  }} </div>
+</div>
+<div class="grid-item">
+    <div class="modifier"> {{ modifiers.dexterity | formatModifier  }} </div>
+</div>
+<div class="grid-item">
+    <div class="modifier"> {{ modifiers.constitution | formatModifier }}</div>
+</div>
+<div class="grid-item">
+    <div class="modifier"> {{ modifiers.intelligence | formatModifier  }} </div>
+</div>
+<div class="grid-item">
+    <div class="modifier"> {{ modifiers.wisdom | formatModifier  }} </div>
+</div>
+<div class="grid-item">
+    <div class="modifier"> {{ modifiers.charisma | formatModifier  }} </div>
+</div>
