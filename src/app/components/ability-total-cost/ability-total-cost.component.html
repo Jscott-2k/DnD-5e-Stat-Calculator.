@@ -1,1 +1,5 @@
-<div class="grid-item">Total Cost {{totalCost}}/27</div>
+<div class="grid-item"> <span 
+    [style.color]="(totalCost > 27) ? 'red' : (totalCost < 27) ? '#555500' : 'green'"
+    
+    
+    > Total Cost {{totalCost}}/27 </span></div>

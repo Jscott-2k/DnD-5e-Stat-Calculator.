@@ -1,23 +1,32 @@
+
 <div class="grid-item">
-  <input type="number" id="as-strength" [(ngModel)]="abilityScores.strength" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.strength}}</div>
+  <input type="range" value="8" id="as-strength" [(ngModel)]="abilityScores.strength" (input)="updateAbilityScore()" max="15" min="8">
 </div>
 
 <div class="grid-item">
-  <input type="number" id="as-dexterity" [(ngModel)]="abilityScores.dexterity" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.dexterity}}</div>
+  <input type="range" value="8" id="as-dexterity" [(ngModel)]="abilityScores.dexterity" (input)="updateAbilityScore()" max="15" min="8">
+ 
 </div>
 
 <div class="grid-item">
-  <input type="number" id="as-constitution" [(ngModel)]="abilityScores.constitution" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.constitution}}</div>
+  <input type="range" value="8" id="as-constitution" [(ngModel)]="abilityScores.constitution" (input)="updateAbilityScore()" max="15" min="8">
 </div>
 
 <div class="grid-item">
-  <input type="number" id="as-intelligence" [(ngModel)]="abilityScores.intelligence" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.intelligence}}</div>
+  <input type="range"  value="8" id="as-intelligence" [(ngModel)]="abilityScores.intelligence" (input)="updateAbilityScore()" max="15" min="8">
 </div>
 
 <div class="grid-item">
-  <input type="number" id="as-wisdom" [(ngModel)]="abilityScores.wisdom" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.wisdom}}</div>
+  <input type="range" value="8" id="as-wisdom" [(ngModel)]="abilityScores.wisdom" (input)="updateAbilityScore()" max="15" min="8">
 </div>
 
 <div class="grid-item">
-  <input type="number" id="as-charisma" [(ngModel)]="abilityScores.charisma" (input)="updateAbilityScore()" max="15" min="8">
+  <div class="score-val">{{abilityScores.charisma}}</div>
+  <input type="range" value="8" id="as-charisma" [(ngModel)]="abilityScores.charisma" (input)="updateAbilityScore()" max="15" min="8">
+
 </div>
