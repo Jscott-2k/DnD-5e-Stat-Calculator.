@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PointBuyService {
 
+
   constructor() { }
-
-  private baseScore = 8;
-
+  
+  private totalCostSubject: BehaviorSubject<number> = new BehaviorSubject(0);
+  totalCost$: Observable<number> = this.totalCostSubject.asObservable();
+  updateTotalCost(totalCost: number) {
+    this.totalCostSubject.next(totalCost);
+  }
   calculatePointCost(abilityScore: number): number {
     if (abilityScore <= 13) {
       return Math.floor((abilityScore - 8) / 2);

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AttributeDataService } from './ability-data.service';
+import { ScoreModifierService } from './score-modifier.service';
 
-describe('AbilityDataService', () => {
-  let service: AttributeDataService;
+describe('ScoreModifierService', () => {
+  let service: ScoreModifierService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AttributeDataService);
+    service = TestBed.inject(ScoreModifierService);
   });
 
   it('should be created', () => {

@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PointBuyService } from 'src/app/services/point-buy.service';
-import { AbilityScoresComponent } from '../ability-scores/ability-scores.component';
-import { AbilityDataService } from 'src/app/services/ability-data.service';
+import { AttributeDataService } from 'src/app/services/ability-data.service';
+import IAttributes from 'src/app/interfaces/IAttributes';
+import { ATTRIBUTE_KEYS } from 'src/app/constants/attributesl.constants';
 
 @Component({
   selector: 'app-ability-costs',
@@ -10,32 +11,33 @@ import { AbilityDataService } from 'src/app/services/ability-data.service';
 })
 export class AbilityCostsComponent implements OnInit {
 
-  strengthCost: number = 0;
-  dexterityCost: number = 0;
-  constitutionCost: number = 0;
-  intelligenceCost: number = 0;
-  wisdomCost: number = 0;
-  charismaCost: number = 0;
-  
   totalCost:number = 0;
 
-  constructor(private abilityData: AbilityDataService, private pointBuy: PointBuyService) {}
+
+  costs:IAttributes = {
+    strength: 0,
+    dexterity: 0,
+    constitution: 0,
+    intelligence: 0,
+    wisdom: 0,
+    charisma: 0
+  }
+
+  constructor(private abilityData: AttributeDataService, private pointBuy: PointBuyService) {}
 
   ngOnInit() {
     this.abilityData.abilityScores$.subscribe((abilityScores) => {
-      this.strengthCost = this.calculateCost(abilityScores.strength);
-      this.dexterityCost = this.calculateCost(abilityScores.dexterity);
-      this.constitutionCost = this.calculateCost(abilityScores.constitution);
-      this.intelligenceCost = this.calculateCost(abilityScores.intelligence);
-      this.wisdomCost = this.calculateCost(abilityScores.wisdom);
-      this.charismaCost = this.calculateCost(abilityScores.charisma);
-
-      this.totalCost = this.strengthCost + this.dexterityCost + this.constitutionCost +
-      this.intelligenceCost + this.wisdomCost + this.charismaCost;
+      this.totalCost = 0;
+      ATTRIBUTE_KEYS.forEach(attr => {
+        this.costs[attr] = this.calculateCost(abilityScores[attr]);
+        this.totalCost+=this.costs[attr];
+      });
+      this.pointBuy.updateTotalCost(this.totalCost);
     });
   }
 
   calculateCost(abilityScore: number): number {
     return this.pointBuy.calculatePointCost(abilityScore);
+
   }
 }
