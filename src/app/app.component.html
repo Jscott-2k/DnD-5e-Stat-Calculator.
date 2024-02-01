@@ -5,7 +5,7 @@
 <nav>
 
 </nav>
-<main>
+<main [style.backgroundColor]=" (totalCost) > 27 ? 'rgb(224, 132, 132)' : (totalCost) < 27 ?  'rgb(132, 181, 224)' : 'rgb(132, 224, 132)'">
 
   <div  class="sub-grid">
     <div class="grid-header">Attribute</div>
